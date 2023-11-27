@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>repetition</title>
+        <style>
+            /* CSS styles for the chess board */
+    
+            .square {
+                width: 50px;
+                height: 50px;
+                /* border: 1px solid black; */
+                text-align: center;
+                font-size: 40px;
+            }
+            .row {
+                display: flex;
+                flex-direction: row; /* Default direction is row */
+            }
+            body {
+                display: flex;
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
+                height: 100vh; /* Full viewport height */
+                margin: 0; /* Remove default margin */
+            }
+
+            .container {
+                text-align: center; /* Align content within container */
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 style="color: rgb(5, 231, 5);">{{message}}</h1>
+        <h3 style="color: rgb(255, 0, 0);">{{message_r}}</h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="button" name="back" value="Back to Home" onclick="window.location.href='/back'">
+    </body>
+</html>

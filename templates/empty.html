@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+    <style>
+        /* CSS styles for the chess board */
+
+        .square {
+            width: 50px;
+            height: 50px;
+            /* border: 1px solid black; */
+            text-align: center;
+            font-size: 40px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row; /* Default direction is row */
+        }
+    </style>
+    </head>
+    <body>
+        <div>
+            <h3>{{ message }}</h3>
+            <h3>{{ move_sequence }}</h3>
+            
+        </div>
+        
+        <div id="chess-board">
+            {{ html_board | safe}}
+        </div>
+        <div id="row" style="display: flex;">
+            <div id="row_item" style="margin-right: 10px;">
+                <form action="/enter_move">
+                    <label for="textbox">Enter Move:</label><br>
+                    <input type="text" id="textbox" name="user_text"><br><br>
+                    <input type="submit" value="Submit">   
+                </form>
+            </div>
+            <div id="row_item" style="margin-top: 60px;">
+                <form action="/predict_move">
+                    <ol>
+                        {% for move in top_5_moves %}
+                            <li>{{ move }}</li>
+                        {% endfor %}
+                    </ol>
+                    <input type="submit" value="Get Suggestions">
+                </form>
+            </div>
+        </div>
+        
+            
+    </body>
+    
+</html>

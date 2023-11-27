@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+    <style>
+        #textbox{
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <center>
+    <h1>Repetition Detector</h1>
+    <form action="/process_text" method="post">
+        <label for="textbox">Enter Move Sequence:</label><br>
+        <input type="text" id="textbox" name="user_text" required>
+        <p style="color: #ec0000;">{{illegal}}</p>
+        <p style="color: #00ec6e;">{{legal}}</p>
+        <button type="button" onclick="clearInput()">Clear</button>
+        <input type="submit" value="Submit">
+    </form>
+    </center>
+</div>
+<div>
+    <!-- <br>
+    <br>
+    <form action="/process_text" method="post">
+        <input type="submit" value="Predict Moves" disabled>
+    </form> -->
+
+<!-- </div>
+    <h3>Predicted Moves:</h3>
+    <ol>
+        {% for move in top_5_moves %}
+            <li>{{ move }}</li>
+        {% endfor %}
+    </ol>
+</div>
+</div> -->
+</div>
+
+
+<script>
+    function clearInput() {
+        document.getElementById('textbox').value = ''; // Clear the input field
+    }
+</script>
+
+
+</body>
+</html>
