@@ -40,12 +40,10 @@ def process_text():
     if empty_move_found:
 
         z_chess_board = chess.Board()
-        print(z_chess_board)
         for move in moves_before_z:
             z_chess_board.push_san(move)
 
 
-        print(z_chess_board)
         #predictions = predict_moves(fen_before_z.fen())
 
 

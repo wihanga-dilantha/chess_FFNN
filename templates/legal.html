@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>valid</title>
-    </head>
-    <body>
-        <center>
-        <h1 style="color: rgb(23, 192, 23);">Sequence appeares to be valid!</h1>
+<head>
+    <title>Valid Sequence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(23, 192, 23);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="button"],
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Sequence appears to be valid!</h1>
         <form action="/process_repetition" method="get">
             <h3>Move Sequence: {{sequence}}</h3>
-            <h2>check repetition</h2>
+            <h2>Check repetition</h2>
             <input type="button" name="back" value="Back" onclick="window.location.href='/back'">
             <input type="submit" value="PROCEED">
         </form>
-        </center>
+    </div>
 
-
-
-        <script>
-        
-        </script>
-    </body>
+    <script>
+        // You can add any additional scripts here if needed
+    </script>
+</body>
 </html>
