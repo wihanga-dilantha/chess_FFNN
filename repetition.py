@@ -1,7 +1,5 @@
 import chess
 
-import chess
-
 def check_threefold_repetition(moves_str):
     moves = moves_str.split()  # Split the string of moves into a list
     positions_count = {}  # Dictionary to store counts of positions encountered
